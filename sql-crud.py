@@ -123,23 +123,31 @@ zakariye_farah_nor = Programmer(
 
 
 
-# deleting a single record
-fname = input("Enter a first name: ")
-lname = input("Enter a last name: ")
-programmer = session.query(Programmer).filter_by(first_name=fname, last_name=lname).first()
+# # deleting a single record
+# fname = input("Enter a first name: ")
+# lname = input("Enter a last name: ")
+# programmer = session.query(Programmer).filter_by(first_name=fname, last_name=lname).first()
 
 # Defensive programmering
-if programmer is not None:
-    print("Programmer found: ", programmer.first_name + " " + programmer.last_name)
-    confirmation = input("Are you sure you want to delete this record? (y/n) ")
-    if confirmation.lower() == "y":
-        session.delete(programmer)
-        session.commit()
-        print("Programmer has been deleted")
-    else:
-        print("Programmer not deleted")
-else:
-    print("No records found")
+# if programmer is not None:
+#     print("Programmer found: ", programmer.first_name + " " + programmer.last_name)
+#     confirmation = input("Are you sure you want to delete this record? (y/n) ")
+#     if confirmation.lower() == "y":
+#         session.delete(programmer)
+#         session.commit()
+#         print("Programmer has been deleted")
+#     else:
+#         print("Programmer not deleted")
+# else:
+#     print("No records found")
+
+
+# Delete Multiple records, don't run this code
+# programmers = session.query(Programmer)
+# for programmer in programmers:
+#     session.delete(programmer)
+#     session.commit() 
+
 
 # Query the database fo find all programmers
 programmers = session.query(Programmer)
