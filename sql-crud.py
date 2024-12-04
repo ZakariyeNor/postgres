@@ -90,6 +90,7 @@ zakariye_farah_nor = Programmer(
     famous_for ="Programing Language Student",
 )
 
+
 # add each instance of our programmers to our session
 #session.add(ada_lovelace)
 #session.add(alan_turing)
@@ -99,6 +100,7 @@ zakariye_farah_nor = Programmer(
 #session.add(tim_berners_lee)
 #session.add(zakariye_farah_nor)
 
+
 # commit our session to the database
 #session.commit()
 
@@ -107,8 +109,10 @@ zakariye_farah_nor = Programmer(
 #programmer = session.query(Programmer).filter_by(id=7).first()
 #programmer.famous_for = "World President"
 
+
 # commit our session to the database
 #session.commit()
+
 
 # Updating multiple records
 # people = session.query(Programmer)
@@ -122,11 +126,11 @@ zakariye_farah_nor = Programmer(
 #     session.commit()
 
 
-
-# # deleting a single record
+# deleting a single record
 # fname = input("Enter a first name: ")
 # lname = input("Enter a last name: ")
 # programmer = session.query(Programmer).filter_by(first_name=fname, last_name=lname).first()
+
 
 # Defensive programmering
 # if programmer is not None:
